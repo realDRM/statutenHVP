@@ -7,6 +7,9 @@
 *.out
 *.toc
 
+## Vim files
+*.swp
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
