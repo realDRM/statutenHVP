@@ -3,10 +3,17 @@
 \usepackage[dutch]{babel}
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage[tablegrid]{vhistory}
 
 \theoremstyle{definition}
 \newtheorem{titel}{\newline\Large Titel}
 \newtheorem{artikel}{\large Artikel}
+\newenvironment{artikelbis}
+  {\addtocounter{artikel}{-1}
+   \renewcommand{\theartikel}{\arabic{artikel}.bis}
+   \begin{artikel}}
+  {\end{artikel}}
+
 \renewcommand{\familydefault}{\sfdefault}
 
 \newcommand{\ttext}[1]{\Large \textbf{#1} \normalsize}
@@ -14,16 +21,23 @@
 \newcommand{\ttextenum}{\mbox{}}
 
 \title{\vspace{-2.0cm}\includegraphics[scale=0.3]{img/logo.png}\\
-  \vspace{1cm}Statuten Het Vrije Podium\\Ontwerpdocument}
+  \vspace{1cm}Statuten Het Vrije Podium}
 \author{Dennis D'Ooghe\\Voorzitter 2014-2015}
-\date{Versie 26/03/2015} % Vul datum in als je dit in de header wilt
+\date{Versie 31/03/2015} % Vul datum in als je dit in de header wilt
 
 \begin{document}
 \maketitle
 
+\begin{versionhistory}
+  \vhEntry{1.0}{26/03/2015}{Dennis D'Ooghe}{Eerste versie}
+  \vhEntry{1.1}{31/03/2015}{Dennis D'Ooghe}{Aanpassingen na open overleg met leden}
+\end{versionhistory}
+
+\newpage
+
 % ---------- DE KRING ----------
 
-\begin{titel}\ttext{Basis van de kring}
+\begin{titel}\ttext{Basis van de vereniging}
 
   \begin{artikel}\ttextcr
     De vereniging draagt de naam ''Het Vrije Podium'', afgekort ''HVP''.
@@ -54,7 +68,7 @@
           \item Theater
           \item Improvisatie
           \item Online filmproductie
-          \item Het cre\"eren van eigen theaterteksten
+          \item Het cre"eren van eigen theaterteksten
         \end{itemize}
         Daarnaast promoot de vereniging ook de Nederlandstalige amateurkunsten in Brussel.
   \end{artikel}
@@ -117,7 +131,7 @@
 
   \begin{artikel}\ttextcr
     De algemene vergadering beslist over de goedkeuring van het jaarverslag van het uittredend bestuur.
-    Op de algemene vergadering worden tevens kandidaten bestuursleden voorgesteld.
+    Op de algemene vergadering worden tevens kandidaat-bestuursleden voorgesteld.
     De algemene vergadering is bevoegd de statuten van de vereniging te wijzigen volgens de procedure vermeld in art.\ref{av-beslissen}
   \end{artikel}
 
@@ -134,7 +148,7 @@
   \end{artikel}
 
   \begin{artikel}\ttextcr
-    Indien er punten toegevoegd worden aan de dagorde via de procedure uit art.\ref{av-dagorde}, dient een ge\"updatete dagorde verstuurd te worden naar de leden via elektronische weg, ten laatste 36 uur voor de start van de algemene vergadering.
+    Indien er punten toegevoegd worden aan de dagorde via de procedure uit art.\ref{av-dagorde}, dient een ge"updatete dagorde verstuurd te worden naar de leden via elektronische weg, ten laatste 36 uur voor de start van de algemene vergadering.
   \end{artikel}
 
   \begin{artikel}\ttextcr
@@ -167,7 +181,7 @@
 
   \begin{artikel}\ttextenum
     \begin{enumerate}
-      \item Het bestuur telt minstens 5 kernfuncties die samen het kernbestuur vormen:
+      \item Het bestuur telt 5 kernfuncties die samen het kernbestuur vormen:
       \begin{description}
         \item[Voorzitter]
           De voorzitter zit de bestuursvergaderingen en de algemene vergadering voor, organiseert de algemene vergadering, vertegenwoordigt de vereniging op allerhande gelegenheden, organiseert allerhande activiteiten en staat in voor de verkiezing van het nieuw bestuur.
@@ -176,9 +190,9 @@
         \item[Secretaris]
           De secretaris maakt een verslag van alle bestuursvergaderingen, van alle activiteiten, stelt het moreel jaarverslag van de vereniging op en is verantwoordelijk voor de voorlichting van de studenten op vlak van studentenvertegenwoordiging.
         \item[Penningmeester]
-          De penningmeester houdt de boekhouding van de vereniging bij, stelt een financieel verslag op van elke activiteit, stelt het globaal financieel jaarverslag van de kring op, is verantwoordelijk, samen met de voorzitter, voor alle inkomsten en uitgaven van de kringvereniging.
+          De penningmeester houdt de boekhouding van de vereniging bij, stelt een financieel verslag op van elke activiteit, stelt het globaal financieel jaarverslag van de vereniging op, is verantwoordelijk, samen met de voorzitter, voor alle inkomsten en uitgaven van de vereniging.
         \item[Artistiek directeur]
-          De artistiek directeur bewaakt de artistieke en creatieve richting van de vereniging, is het aanspreekpunt voor eventuele productieleiders (art.\ref{bestuur-productie}) en zorgt ervoor, samen met de voorzitter, dat er genoeg creatieve vari\"etieit is in de georganiseerde activiteiten om te voldoen aan de noden van de leden.
+          De artistiek directeur bewaakt de artistieke en creatieve richting van de vereniging, is het aanspreekpunt voor eventuele productieleiders (art.\ref{bestuur-productie}) en zorgt ervoor, samen met de voorzitter, dat er genoeg creatieve vari"etieit is in de georganiseerde activiteiten om te voldoen aan de noden van de leden.
       \end{description}
 
       Cumulatie van kernfunctie is enkel mogelijk met de ''secretaris''- en de ''artistiek directeur''-functie.
@@ -246,7 +260,7 @@
       \item
         De kandidaturen voor bestuursfuncties dienen bij de voorzitter van de vereniging ingediend worden.
       \item
-        Een kandidaat voor een kernbestuursfunctie dient zijn kandidatuur minstens 1 week voor de algemene vergadering in te dienen.
+        Een kandidaat voor een kernbestuursfunctie dient zijn kandidatuur minstens 7 dagen voor de algemene vergadering in te dienen.
       \item
         Een kandidaat voor een andere bestuursfunctie kan zijn kandidatuur indienen tot het begin van de stemming over de desbetreffende functie.
       \item
@@ -257,12 +271,12 @@
 
   \begin{artikel}\ttextcr
     Het bestuur wordt jaarlijks verkozen tijdens geheime en schriftelijke verkiezingen.
-    De kandidaat bestuursleden worden verkozen bij meerderheid van stemmen.
+    De kandidaat-bestuursleden worden verkozen bij meerderheid van stemmen.
     De verkiezingen sluiten aan op de algemene vergadering.
   \end{artikel}
 
   \begin{artikel}\ttextcr
-    Verkiesbare leden kunnen doorheen het academiejaar door het verkozen bestuur gecoöpteerd worden als gewoon bestuurslid, indien het bestuur dit nodig acht om de goede werking van de vereniging te verzekeren.
+    Verkiesbare leden kunnen doorheen het academiejaar door het verkozen bestuur geco"opteerd worden als gewoon bestuurslid, indien het bestuur dit nodig acht om de goede werking van de vereniging te verzekeren.
   \end{artikel}
 
   \begin{artikel}\ttextcr
@@ -284,9 +298,9 @@
   \end{artikel}
 
   \begin{artikel}\ttextcr
-    Om tot ontbinding van de kring vereniging over te gaan het akkoord vereist van 4/5 van de aanwezige of vertegenwoordigde effectieve leden.
+    Om tot ontbinding van de vereniging over te gaan is het akkoord vereist van 4/5 van de aanwezige of vertegenwoordigde effectieve leden.
     De beslissing om tot ontbinding over te gaan kan enkel genomen worden tijdens de algemene vergadering.
-    Hiervoor moet er minstens de helft van de effectieve leden aanwezig is.
+    Hiervoor moet minstens de helft van de effectieve leden aanwezig zijn.
   \end{artikel}
 
   \begin{artikel}\ttextcr
@@ -308,6 +322,10 @@
     In dergelijk geval is dit reglement te allen tijde ondergeschikt aan deze statuten en er nooit mee in tegenspraak.
     Het opstellen, goedkeuren en wijzigen van dergelijk reglement is de verantwoordelijkheid van het bestuur van de vereniging.
   \end{artikel}
+
+  \begin{artikelbis}\label{varia-bis}\ttextcr
+    Er is geen artikel \ref{varia-bis}.
+  \end{artikelbis}
 
 \end{titel}
 
