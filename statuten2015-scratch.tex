@@ -7,12 +7,17 @@
 
 \theoremstyle{definition}
 \newtheorem{titel}{\newline\Large Titel}
-\newtheorem{artikel}{\large Artikel}
+\newtheorem{artikelbase}{\large Artikel}
 \newenvironment{artikelbis}
   {\addtocounter{artikel}{-1}
    \renewcommand{\theartikel}{\arabic{artikel}.bis}
    \begin{artikel}}
   {\end{artikel}}
+
+\newenvironment{artikel}
+  {\begin{artikelbase}}
+  {\smallskip
+   \end{artikelbase}}
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -31,6 +36,7 @@
 \begin{versionhistory}
   \vhEntry{1.0}{26/03/2015}{Dennis D'Ooghe}{Eerste versie}
   \vhEntry{1.1}{01/04/2015}{Dennis D'Ooghe}{Aanpassingen na open overleg met leden}
+  \vhEntry{1.2}{05/04/2015}{Dennis D'Ooghe}{Aanpassingen na verder overleg}
 \end{versionhistory}
 
 \newpage
@@ -62,7 +68,7 @@
 
   \begin{artikel}\ttextcr
     Het doel van de vereniging is het samenbrengen en ondersteunen van creatieve studenten, vooral gericht naar de podium- en theatergerelateerde kunsten.
-    Dit door hen een laagdrempelige mogelijkheid te bieden om deel te nemen aan activiteiten en producties, zowel voor als achter de schermen, en hen een podium te bieden om hun creatieve instincten te ontplooien.
+    Dit door hen op een laagdrempelige manier de mogelijkheid te bieden om deel te nemen aan activiteiten en producties, zowel voor als achter de schermen, en hen een podium te bieden om hun creatieve instincten te ontplooien.\\
     Verder staat de vereniging open voor mogelijkheden om de Nederlandstalige podiumkunsten in Brussel te ondersteunen.
   \end{artikel}
 
@@ -79,7 +85,7 @@
     Ter ondersteuning van zijn doelen, streeft de vereniging onder andere elk academiejaar naar de organisatie van volgende activiteiten waaraan zijn leden kunnen deelnemen.
     \begin{enumerate}
       \item Een publiek toegankelijk optreden op een VUB-campus.
-      \item Een publiek toegankelijk optreden buiten de VUB-campussen of de publieke digitale beschikbaarheid van een optreden.
+      \item Een publiek toegankelijk optreden buiten de VUB-campussen of de publieke digitale beschikbaarheid van een optreden of project.
       \item Minstens tien samenkomsten of activiteiten die openstaan voor VUB-studenten (met een absoluut minimum van vijf).
     \end{enumerate}
   \end{artikel}
@@ -101,7 +107,7 @@
       \item
         Effectieve leden zijn leden die tot de doelgroep van de vereniging behoren en hun lidgeld hebben betaald.
       \item
-        Ereleden zijn leden die hun erelidgeld betaald hebben.
+        Ereleden zijn leden die hun erelidgeld hebben betaald.
       \item
         Een lid kan tegelijk effectief lid en erelid zijn.
     \end{enumerate}
@@ -239,7 +245,6 @@
 \end{titel}
 
 % ---------- PRODUCTIELEIDING ----------
-\newpage
 \begin{titel}\ttext{Productieleiding}
 
   \begin{artikel}\label{bestuur-productie}\ttextenum
@@ -279,14 +284,13 @@
 
   \begin{artikel}\label{bestuur-vervanging}\ttextcr
     Indien de artistiek directeur eveneens productieleider is voor een activiteit, is deze niet in staat zichzelf te controleren of te sanctioneren zoals bepaald in art.~\ref{bestuur-productie} en art.~\ref{bestuur-controle}.
-    De voorzitter duidt een ander lid van het kernbestuur aan om deze rechten en plichten over te nemen voor de duur van de activiteit.
+    De voorzitter duidt een ander lid van het kernbestuur aan om deze rechten en plichten over te nemen voor de duur van de activiteit en enkel met betrekking tot de activiteit.
     De artistiek directeur behoudt zijn rechten en plichten voor alle andere activiteiten.
   \end{artikel}
 
 \end{titel}
 
 % ---------- HET BESTUUR - VERKIEZING ----------
-\newpage
 \begin{titel}\ttext{Toetreding tot het bestuur}
 
   \begin{artikel}\ttextcr
@@ -368,10 +372,6 @@
     In dergelijk geval is dit reglement te allen tijde ondergeschikt aan deze statuten en er nooit mee in tegenspraak.
     Het opstellen, goedkeuren en wijzigen van dergelijk reglement is de verantwoordelijkheid van het bestuur van de vereniging.
   \end{artikel}
-
-  \begin{artikelbis}\label{varia-bis}\ttextcr
-    Er is geen artikel \ref{varia-bis}.
-  \end{artikelbis}
 
 \end{titel}
 
